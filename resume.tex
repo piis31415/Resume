@@ -1,0 +1,180 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenmes,dvipsnames]{color}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage{changepage}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+
+\input{glyphtounicode}
+
+\definecolor{yale}{HTML}{00356B}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\let\oldl\Large
+\renewcommand{\Large}[1]{{\color{yale}\oldl{#1}}}
+
+\let\oldsc\textsc{}
+\renewcommand{\textsc}[1]{\normalsize\oldsc{#1}}
+
+
+\newenvironment{desc}{\footnotesize \begin{adjustwidth}{15pt}{0pt}}
+{\end{adjustwidth}}
+\newcommand{\years}[2]{\footnotesize \ifx?#1?#2\else#1 -- #2\fi}
+
+\addtolength{\oddsidemargin}{-0.25in}
+\addtolength{\evensidemargin}{-0.25in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\titleformat{\section}{
+  \color{yale}\vspace{-5pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\vspace{-1pt} \color{yale}\titlerule \vspace{-6pt}]
+
+
+\newenvironment{module}[4]{
+\textsc{#1} \hfill \textsc{\footnotesize#4}\\
+\years{#2}{#3}
+\footnotesize \begin{adjustwidth}{15pt}{0pt}
+}{
+\end{adjustwidth} 
+\normalsize \null\vspace{-11pt}
+}
+
+\newenvironment{edmodule}[5]{
+\textsc{#1} \hfill \textsc{\footnotesize#4}\\
+\years{#2}{#3} \hfill \textsc{\footnotesize#5}
+\footnotesize \begin{adjustwidth}{15pt}{0pt}
+}{
+\end{adjustwidth} 
+\normalsize \null\vspace{-11pt}
+}
+
+\newenvironment{moduletwo}[2]{
+\textsc{#1} \hfill \textsc{\footnotesize#2}
+\footnotesize \begin{adjustwidth}{12pt}{0pt}
+\setstretch{1.15}}{
+\end{adjustwidth} \normalsize \null\vspace{-11pt}
+}
+
+\newcommand{\category}[1]{\textbf{\Large{#1}}\vspace{-5pt}\\ \setstretch{1.35}\null\vspace{-5pt}\newline}
+
+\begin{document}
+\setstretch{1.1}
+\begin{center}
+\begin{minipage}[t]{.3\textwidth}
+\vspace{0pt}
+\footnotesize
+\reflectbox{\faIcon{phone}} (612) 868-3457\\
+\faIcon{envelope} \href{mailto:jason.wang278@gmail.com}{\underline{jason.wang278@gmail.com}}\\%\faLink \href{https://jas0n.net}{\underline{github.com/piis31415}}
+\end{minipage}
+\begin{minipage}[t]{.35\textwidth}
+\vspace{0pt}
+\centering
+\textbf{\color{yale}\Huge \scshape Jason Wang} 
+\end{minipage}
+\begin{minipage}[t]{.3\textwidth}
+\vspace{0pt}
+\footnotesize\begin{flushright}
+\href{https://linkedin.com/in/jason-l-wang}{\underline{linkedin.com/in/jason-l-wang}} \faLinkedin\\
+\href{https://github.com/piis31415}{\underline{github.com/piis31415}} \faGithub\end{flushright}
+\end{minipage}
+\end{center}\vspace{-10pt}\\
+\hrulefill\vspace{-10pt}\\
+\null\hrulefill\vspace{5pt}\\
+\category{Education}
+\begin{edmodule}{Yale University}{Sep. 2021}{May 2025}{New Haven, CT}{\textbf{Major:} Undecided, \textbf{GPA:} 3.76/4.00}
+\end{edmodule}\vspace{-25pt}\footnotesize
+\begin{itemize}\setstretch{1}
+    \item \textbf{Relevant Coursework:} Probability Theory; Intensive Introductory Physics; Intro to CS; Intro to EE
+    \item \textbf{Planned for Spring 2022:} Data Structures \& Programming Techniques; Real Analysis; Intro to Abstract Algebra 
+\end{itemize}\\
+\begin{edmodule}{University of Minnesota}{Sep. 2016}{May 2021}{Minneapolis, MN}{
+\textbf{GPA:} 3.96/4.00}
+\end{edmodule}\vspace{-25pt}
+\begin{itemize}\setstretch{1}
+    \item \textbf{Relevant Coursework:} Intro to Waves, Optics, and Special Relativity; Single- \& Multi-Variable Calculus; Linear Algebra; Error-Correcting Codes, Finite Fields, and Algebraic Curves; Cryptology; Dynamical Systems \& Chaos
+\end{itemize}\vspace{-7pt}
+%\begin{edmodule}{The Blake School}{Sep. 2017}{June 2021}{Minneapolis, MN}{
+%\textbf{GPA:} 3.92/4.00}
+%\end{edmodule}\\\vspace{-23pt}
+%\begin{module}{Yale University}{Sep. 2021}{May 2025 (expected)}{New Haven, CT} \end{module}
+\hrulefill\vspace{5pt}\\
+\category{Experience}
+\begin{module}{MNHSML, Yale Math Competitions / \footnotesize Math Competitor, Problem Writer}{Apr. 2016}{Present}{}
+\end{module}\vspace{-25pt}
+\begin{itemize}\setstretch{1}
+    \item Organized virtual practices for 100+ math team members on Zoom. Created handouts, mock competition using \LaTeX. 
+    \item Participated in competitions both individually (AIME, USAJMO, Putnam) and with a team (ARML, HMMT, PUMaC).
+    \item Wrote problems for MMATHS 2021 for $\sim 500$ students.
+\end{itemize}
+\begin{module}{University Of Minnesota / \footnotesize Undergraduate Researcher}{Jan. 2020}{Present}{Minneapolis, MN} 
+\end{module}\vspace{-25pt}
+\begin{itemize}\setstretch{1}
+    \item Investigated ranking \& rating systems and developed a metric to quantify gerrymandering in group of three undergraduates, led by post-doctorate Alexis Johnson.
+    \item Used Python (pandas, matplotlib) to process raw government data and to develop \& calculate our metric.
+    \item Presented at the MAA North Central Conference in March 2021, planned publication in 2022.
+\end{itemize}
+%\begin{module}{Yale University / \footnotesize Student Tech %Collaborative}{Oct. 2021}{Present}{New Haven, CT} 
+%\vspace{5pt}
+%\begin{itemize}\setstretch{1}
+%    \item 
+%\end{itemize}
+%\end{module}
+%\begin{module}{Student Tech Collaborative \\ \footnotesize Student Tech}{Oct. 2021}{Present}{Minneapolis, MN}
+%\vspace{5pt}
+%\begin{itemize}\setstretch{1}
+%\item Founded a satirical news website for my high school. 
+%\item Tinkered with an existing WordPress template's CSS to %customize website design 
+%\item Implemented static website hosting using GitHub Pages
+%\item Wrote numerous articles satirizing everything from school %administration to world events.
+%\end{itemize}
+%\end{module}
+\vspace{-9pt}
+\hrulefill\vspace{5pt}\\
+\category{Projects}
+\begin{module}{COVID Data Visualization}{Oct. 2020}{May 2021}{}
+\end{module}\vspace{-25pt}
+\begin{itemize}\setstretch{1}
+    \item Used MN government data and Python (matplotlib) to create graphs of county COVID cases and infection rates.
+    \item Shared findings with school administration, $\sim200$ followers on Instagram.
+\end{itemize}
+\begin{module}{CMIMC Programming Competition}{}{Jan. 2021}{}
+\end{module}\vspace{-25pt}
+\begin{itemize}\setstretch{1}
+    \item Won 1st place in AI round, 8th place overall in the 2021 Carnegie Mellon Informatics and Mathematics Programming Competition with a team of three.
+    \item Developed AI using Python in one week to play three adversarial AI games with other AIs developed by other teams.
+\end{itemize}
+\vspace{-25pt}
+\null\hrulefill\vspace{5pt}\\
+\category{Skills \& Interests}
+\begin{moduletwo}{Technical}{}
+C, Python (matplotlib, seaborn, numpy, pandas), JavaScript, \LaTeX, Racket, R, Unix
+\end{moduletwo}
+\vspace{-7pt}
+\begin{moduletwo}{Languages}{}
+Bilingual English and Mandarin Chinese, Limited French
+\end{moduletwo}
+\vspace{-7pt}
+\begin{moduletwo}{Interests}{}
+Music Composition, Cello, Piano, Cooking, Origami, Creative Writing
+\end{moduletwo}
+\end{document} 
